@@ -37,7 +37,7 @@
 
 #include "SEEKFREE_FONT.h"
 #include "SEEKFREE_IPS114_SPI.h"
-
+#include "main.h"
 
 
 
@@ -53,7 +53,7 @@
 void ips114_writeIndex(uint8 dat)			//–¥√¸¡Ó
 {	
 	IPS114_CS(0);
-    IPS114_DC(0);
+  IPS114_DC(0);
 	HAL_SPI_Transmit(&hspi1,&dat,1,500);
 	IPS114_CS(1);
 }

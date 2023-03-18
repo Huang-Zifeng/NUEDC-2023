@@ -43,7 +43,7 @@
 extern SPI_HandleTypeDef hspi1;
 #define IPS114_DC(x)       HAL_GPIO_WritePin(IPS114_DC_GPIO_Port,IPS114_DC_Pin,(GPIO_PinState)x)
 #define IPS114_REST(x)     HAL_GPIO_WritePin(IPS114_REST_GPIO_Port,IPS114_REST_Pin,(GPIO_PinState)x)
-#define IPS114_CS(x)     HAL_GPIO_WritePin(IPS114_CS_GPIO_Port,IPS114_CS_Pin,(GPIO_PinState)x)
+#define IPS114_CS(x)       HAL_GPIO_WritePin(IPS114_CS_GPIO_Port,IPS114_CS_Pin,(GPIO_PinState)x)
 
 
 
