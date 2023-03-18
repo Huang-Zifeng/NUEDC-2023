@@ -121,7 +121,7 @@ int main(void)
   /* USER CODE BEGIN 2 */
 	ips114_init();
   /* USER CODE END 2 */
-   HAL_ADC_Start_DMA (&hadc1,(uint32_t*)&adc_value, 20);
+  HAL_ADC_Start_DMA (&hadc1,(uint32_t*)&adc_value, 20);
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
