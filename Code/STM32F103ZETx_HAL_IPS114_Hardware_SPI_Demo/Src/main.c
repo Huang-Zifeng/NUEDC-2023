@@ -1,7 +1,7 @@
 /**
  * @file main.c
  * @brief Main program body
- * @version 0.1
+ * @version 0.2
  * @date 2023-03-17
  * 
  * @copyright Copyright (c) 2023
