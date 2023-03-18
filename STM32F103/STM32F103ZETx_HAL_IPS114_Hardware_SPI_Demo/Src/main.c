@@ -57,7 +57,7 @@ void SystemClock_Config(void);
 void HAL_GPIO_EXIT_Callback(uint16_t GPIO_Pin)
 {
 	long int j=500000;
-	while(j--);  //延迟消抖
+	while(j--);  //锟接筹拷锟斤拷锟斤拷
 		
 	if(GPIO_Pin==GPIO_PIN_2)       //K1
 	 {
@@ -117,20 +117,20 @@ int main(void)
   /* USER CODE BEGIN 2 */
 	ips114_init();
   /* USER CODE END 2 */
-
+  HAL_ADC_Start_DMA (&hadc1,(uint32_t*)&adc_value, 20);
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
 
-	ips114_clear(WHITE);	//刷屏
+	ips114_clear(WHITE);	//刷锟斤拷
 	  
-	ips114_showstr(0,0,(uint8 *)"seekfree.taobao.com"); //显示字符串
-	ips114_showuint16(0,1,666);                //显示一个16位无符号整数
-	//以上函数x坐标设置是以像素为单位   y坐标是以字符为单位
+	ips114_showstr(0,0,(uint8 *)"seekfree.taobao.com"); //锟斤拷示锟街凤拷锟斤拷
+	ips114_showuint16(0,1,666);                //锟斤拷示一锟斤拷16位锟睫凤拷锟斤拷锟斤拷锟斤拷
+	//锟斤拷锟较猴拷锟斤拷x锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷为锟斤拷位   y锟斤拷锟斤拷锟斤拷锟斤拷锟街凤拷为锟斤拷位
 
-	//汉字显示的X Y坐标与其他函数不一致，汉字显示函数坐标x y都是以像素为单位
-	//这样可以使得位置调节更加随意
+	//锟斤拷锟斤拷锟斤拷示锟斤拷X Y锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷一锟铰ｏ拷锟斤拷锟斤拷锟斤拷示锟斤拷锟斤拷锟斤拷锟斤拷x y锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷为锟斤拷位
+	//锟斤拷锟斤拷锟斤拷锟斤拷使锟斤拷位锟矫碉拷锟节革拷锟斤拷锟斤拷锟斤拷
 	ips114_display_chinese(0,2*16,16,chinese_test[0],4,RED);
 	  HAL_Delay(1000);
     /* USER CODE END WHILE */
